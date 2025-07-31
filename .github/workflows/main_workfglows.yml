@@ -13,10 +13,17 @@ on:
 #job(실행되는 이벤트)
 jobs:
   test:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: print hello
         run: echo "test"  #test를 호출
+  test2:
+    if: github.event_name == 'pull_request' && github.base_ref == 'develop'
+    runs-on: ubuntu-latest
+    steps:
+      - name: print bye
+        run: echo "test2"
 
 
 
