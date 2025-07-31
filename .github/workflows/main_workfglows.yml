@@ -31,5 +31,12 @@ jobs:
       - name: print bye
         run: echo "test2"
 
+  test3:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: print click
+        run: echo "workbench click"
+
 
 
