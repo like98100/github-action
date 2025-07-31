@@ -1,11 +1,14 @@
 #워크플로우 이름 지정
 name: Main_Workflows
 
-#워크플로우 특징 정의(main 브런치에 push될 때마다 실행)
+#워크플로우 특징 정의
 on:
-  push:
+  push: #main 브런치에 push될 때마다 실행
     branches:
       - main
+  pull_request: #PR이 생성되거나 업데이트될 때 실행
+    branches:
+      - develop
 
 #job(실행되는 이벤트)
 jobs:
@@ -14,3 +17,6 @@ jobs:
     steps:
       - name: print hello
         run: echo "test"  #test를 호출
+
+
+
