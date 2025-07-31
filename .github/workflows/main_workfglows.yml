@@ -7,10 +7,10 @@ on:
     branches:
       - main
 
-#job
+#job(실행되는 이벤트)
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - name: print hello
-        run: echo "test"  #test 텍스트를 호출
+        run: echo "test"  #test를 호출
