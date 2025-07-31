@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: print hello
         run: echo "test"  #test를 호출
-  test2:
+  test2: #develop에 pr요청이 왔을 때 발생하는 이벤트
     if: github.event_name == 'pull_request' && github.base_ref == 'develop'
     runs-on: ubuntu-latest
     steps:
