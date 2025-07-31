@@ -1,0 +1,16 @@
+#워크플로우 이름 지정
+name: Main_Workflows
+
+#워크플로우 특징 정의(main 브런치에 push될 때마다 실행)
+on:
+  push:
+    branches:
+      -main
+
+#job
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello
+        run: echo "test"  #test 텍스트를 호출
