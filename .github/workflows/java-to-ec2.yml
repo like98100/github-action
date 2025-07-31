@@ -61,6 +61,6 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
-          script: |
+          script: |   # | -> 순차적으로 명령 실행
             chmod +x ${{env.SCRIPT_DIR}}/run.sh
             ${{env.SCRIPT_DIR}}/run.sh
